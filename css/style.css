@@ -1,0 +1,245 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap');
+/*font-family: 'Roboto', sans-serif;*/
+/*font-family: 'Cera Pro','Roboto', sans-serif;*/
+
+/*common*/
+html 
+{
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+}
+body
+{
+  font-family: 'Cera Pro','Roboto', sans-serif;
+  font-kerning: none;
+  overflow: hidden;
+}
+*, button, button:focus
+{
+  outline:none !important;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: #CDDC39;
+  background: transparent;
+}
+
+::selection {
+  color: #CDDC39;
+  background: transparent;
+}
+ul
+{
+  list-style: none;
+}
+::-webkit-scrollbar-track
+{
+  border-radius: 0;
+  background-color: #ffffff;
+}
+
+::-webkit-scrollbar
+{
+  width: 8px;
+  height: 2px;
+  background-color: #F5F5F5;}
+
+::-webkit-scrollbar-thumb
+{
+  border-radius: 0;
+  background-color: #333333;
+}
+
+
+section
+{
+  position: relative;
+}
+
+.btn_style1
+{
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.btn_style1:hover
+{
+  color: #ffffff;
+}
+.btn_style1:focus
+{
+  background-color: #EB342C;
+  color: #ffffff;
+}
+.btn-effect1
+{
+  position: relative;
+  overflow: hidden;
+}
+.btn-effect1 span {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 100%;
+  background-color: #EB342C;
+  transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.btn-effect1:hover span {
+  width: 225%;
+   height: 262.5px;
+}
+.btn-effect1:active {
+  background-color: #EB342C;
+}
+
+/*common*/
+
+/*header*/
+
+/*header*/
+
+/* main page */
+
+.section_main
+{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+    top: 0;
+    left: 0;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -webkit-perspective: 1000px;
+    background: #222222;
+    overflow: hidden;
+}
+.section_main .main_page
+{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+    top: 0;
+    left: 0;
+-webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+.section_main .main_page .layers
+{
+    position: absolute;
+    left: -4.166vw;
+    top: -4.166vw;
+    right: -4.166vw;
+    bottom: -4.166vw;
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+    transform-origin: center;
+}
+canvas
+{
+width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateZ(190px) scale(.9);
+    -moz-transform: translateZ(190px) scale(.9);
+    -webkit-transform: translateZ(190px) scale(.9);
+    pointer-events: none;
+}
+.section_main .main_page #rain_canvas
+{
+  z-index: 6;
+  position: relative;
+}
+.section_main .main_page .layers.forest
+{
+  background-image: url(../graphics/forest.jpg);
+  z-index: 0;
+}
+.section_main .main_page .butterfly
+{
+  z-index: 1;
+  position: relative
+}
+.section_main .main_page .layers.tree
+{
+  background-image: url(../graphics/tree.webp);
+  z-index: 2;
+transform: translateZ(80px) scale(.9);
+    -moz-transform: translateZ(80px) scale(.9);
+    -webkit-transform: translateZ(80px) scale(.9);
+}
+.section_main .main_page .content
+{
+  position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    font-size: 100px;
+    font-weight: 900;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+transform: translateZ(180px) scale(0.8);
+
+}
+.section_main .main_page .content span
+{
+  width: 100%;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.section_main .main_page .layers.leaves
+{
+  background-image: url(../graphics/leaves.webp);
+  z-index: 4;
+  transform: translateZ(300px);
+    -moz-transform: translateZ(300px);
+    -webkit-transform: translateZ(300px);
+    pointer-events: none;
+    background-size: cover;
+    background-position: center;
+}
+.section_main .main_page .layers.drops
+{
+  background-image: url(../graphics/drops.webp);
+  z-index: 5;
+  transform: translateZ(380px);
+    -moz-transform: translateZ(380px);
+    -webkit-transform: translateZ(380px);
+}
+
+.section_main .main_page .hover_3d
+{
+  transition: all ease 0.05s;
+}
+.section_main .main_page .hover_3d
+{
+  transform-style: preserve-3d;
+}
+body:hover .hover_3d
+{
+/* transform:  translateZ(20px); */
+}
+
+/* main page */
+
